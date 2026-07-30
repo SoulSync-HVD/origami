@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Courier New, monospace;
+}
+
+a { outline: none;
+  text-decoration: none;
+}
+  a:link {
+    color: cyan;
+  }
+  a:visited {
+    color: #7b5bcf;
+  }
+  a:focus {
+    color: #989cfd;
+    background: white;
+  }
+  a:hover {
+    color: #989cfd;
+    background: white;
+  }
+  a:active {
+    color: black;
+  }
+  
+  div {
+    text-align: center;
+  }
+  
+  button {
+    background: white;
+    color: #7b5bcf;
+    border: none;
+  }
