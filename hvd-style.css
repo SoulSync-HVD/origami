@@ -37,9 +37,3 @@ a { outline: none;
     color: #7b5bcf;
     border: none;
   }
-img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  display: block; /* убирает лишний отступ снизу */
-}
