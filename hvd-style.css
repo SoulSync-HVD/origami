@@ -36,6 +36,7 @@ a { outline: none;
   }
 img {
   width: 100vw;
-  height: 100dvh; 
+  height: 100vh;
   object-fit: cover;
+  display: block; /* убирает лишний отступ снизу */
 }
