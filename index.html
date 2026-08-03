@@ -15,26 +15,21 @@
       const audio = document.getElementById('myAudio');
       const image = document.getElementById('myImage');
 
-      // Пути к картинкам
       const images = [
         'пчела7.png',
         'пчелаа7.png',
-        'пчелааа7.png'
+        'beeee7.png'
       ];
 
       let currentIndex = 0;
 
       image.addEventListener('click', () => {
-        // Переходим к следующей картинке (если дошли до конца — остаёмся на последней)
         if (currentIndex < images.length - 1) {
           currentIndex++;
           image.src = images[currentIndex];
-
-          // Воспроизводим звук с начала
+         
           audio.currentTime = 0;
-          audio.play().catch(e => {
-            // В браузерах автовоспроизведение без взаимодействия запрещено;
-            // клик обычно снимает блокировку, но если что-то пошло не так — игнорируем ошибку
+          audio.play().catch(err => {
             console.log('Автовоспроизведение заблокировано браузером', e);
           });
         }
@@ -42,3 +37,4 @@
     </script>
   </body>
 </html>
+Every day, it's a-getting closer
