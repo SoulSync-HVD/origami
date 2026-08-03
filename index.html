@@ -7,8 +7,38 @@
     <link href="/hvd-style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body style="background-color: black;">
+    <audio id="myAudio" src="бмг.mp3"></audio>
 <div style="display: flex; justify-content: center;">
-    <img src="пчела7.png" style="width: 100%; height: auto;"  >
+    <img id="myImage" src="пчела7.png" style="width: 100%; height: auto;"  >
 </div>
+    <script>
+      const audio = document.getElementById('myAudio');
+      const image = document.getElementById('myImage');
+
+      // Пути к картинкам
+      const images = [
+        'пчела7.png',
+        'пчелаа7.png',
+        'пчелааа7.png'
+      ];
+
+      let currentIndex = 0;
+
+      image.addEventListener('click', () => {
+        // Переходим к следующей картинке (если дошли до конца — остаёмся на последней)
+        if (currentIndex < images.length - 1) {
+          currentIndex++;
+          image.src = images[currentIndex];
+
+          // Воспроизводим звук с начала
+          audio.currentTime = 0;
+          audio.play().catch(e => {
+            // В браузерах автовоспроизведение без взаимодействия запрещено;
+            // клик обычно снимает блокировку, но если что-то пошло не так — игнорируем ошибку
+            console.log('Автовоспроизведение заблокировано браузером', e);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
